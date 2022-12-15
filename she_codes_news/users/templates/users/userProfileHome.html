@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if profile.image_url %}
+    <img src="{{ profile.image_url }}"">
+{% else %}
+    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1296&q=60">
+{% endif %}
+
+<h2>{{ profile.username }}</h2>
+<h2>{{ profile.first_name }}</p>
+<!-- <p>{{ customuser.last_name }}</p>
+<img src="{{ story.image_url }}"> -->
+
+<!-- Showing all of the posts written by a specific user -->
+
+{% for story in profile.newsstory_set.all %}
+    {% include "news/storyCard.html" with story=story %}
+{% endfor %}
+
+
+{% endblock %}
+
