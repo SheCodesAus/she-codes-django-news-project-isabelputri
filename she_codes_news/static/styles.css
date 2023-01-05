@@ -45,8 +45,8 @@ nav {
 
 a {
     margin: 2px;
-    text-decoration: none;
-    color: #000;
+    text-decoration: underline;
+    color: purple;
 }
 
 a, p {

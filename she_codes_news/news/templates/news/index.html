@@ -6,7 +6,7 @@
     {% if request.user.is_authenticated %}
         <a href="{% url 'news:newStory' %}">Write New Story</a>
     {% else %}
-        <p>Want to write a story? Test</p>
+        <p>Want to write a story?</p>
         <a href="{% url 'login' %}">Login or</a> <a href="{% url 'users:createAccount' %}">Create Account</a> 
 
     {% endif %}

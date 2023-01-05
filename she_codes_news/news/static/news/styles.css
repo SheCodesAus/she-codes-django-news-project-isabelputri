@@ -84,3 +84,13 @@
     margin: 0 0 10px 10px;
     width: 50%;
 }
+
+#add-story {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a {
+    text-decoration: underline;
+}
